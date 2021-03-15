@@ -1,1 +1,11 @@
 <p>profile-addresses works!</p>
+
+<form [formGroup]="addressesGroup">
+  <div formArrayName="addresses">
+    <profileAddress
+      *ngFor="let profileAddress of addressesArr.controls; let i = index"
+      [formControlName]="i"
+    ></profileAddress>
+  </div>
+  <input type="button" (click)="newAddress()" value="New address" />
+</form>

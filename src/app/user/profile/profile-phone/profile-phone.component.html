@@ -1,1 +1,8 @@
 <p>profile-phone works!</p>
+
+<form [formGroup]="phoneGroup">
+  <input formControlName="number" />
+  <input formControlName="phoneType" />
+  <input formControlName="isPrimary" />
+  <span>{{ phoneGroup.value | json }}</span>
+</form>

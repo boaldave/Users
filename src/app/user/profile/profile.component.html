@@ -1,10 +1,13 @@
 <p>profile works!</p>
 
-<section>
-  <app-profile-personal-info [model]="profile.personalInfo">
+<form [formGroup]="profileFormGroup">
+  <app-profile-personal-info formControlName="personalInfo">
   </app-profile-personal-info>
-  <app-profile-credentials [model]="profile.credentials">
+
+  <app-profile-credentials formControlName="credentials">
   </app-profile-credentials>
-  <app-profile-addresses [model]="profile.addresses"></app-profile-addresses>
-  <app-profile-phones [model]="profile.phones"></app-profile-phones>
-</section>
+
+  <app-profile-addresses formControlName="addresses"> </app-profile-addresses>
+
+  <app-profile-phones formControlName="phones"> </app-profile-phones>
+</form>
